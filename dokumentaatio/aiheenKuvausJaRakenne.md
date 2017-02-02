@@ -16,3 +16,7 @@ enää yhdistelemään.
 -Timanttien liikuttaminen
 -Pisteiden saaminen
 -Pelin lopettaminen
+
+#Luokkakaavio: 
+![alt text](https://raw.githubusercontent.com/Katri96/Bejeweledz/master/dokumentaatio/luokkakaavio.png "Logo Title Text 1")
+
