@@ -14,9 +14,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javax.swing.GroupLayout;
 
-public class Main {
+public class Main  {
 
-    private static final int Leveys = 6;
+   /* private static final int Leveys = 6;
     private static final int Korkeus = 6;
     private static final int SIZE = 100;
 
@@ -42,6 +42,6 @@ public class Main {
         Pane root = new Pane();
         root.setPrefSize(Leveys * SIZE, Korkeus * SIZE);
         return root;
-    }
+    } */
 
 }
