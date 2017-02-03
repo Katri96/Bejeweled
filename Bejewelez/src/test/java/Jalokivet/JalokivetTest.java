@@ -50,14 +50,55 @@ public class JalokivetTest {
         assertEquals(a.getRivi(), 0);
         
     }
-    public void jalokivienLisays() {
+    @Test
+    public void eiLisaaJalokivia() {
         a.lisaaJalokivi(Point2D.ZERO);
-        assertEquals(a.getRivi(), 1);
+        assertEquals(0, a.getRivi());
     }
+    @Test
+    public void lisaaNollakohtaanJalokivet() {
+        Point2D i = new Point2D(2,0);
+        a.lisaaJalokivi(i);
+        assertEquals(0, a.getRivi());
+    }
+    
+    @Test
+    public void lisaaJalokiviaKolme() {
+        Point2D i = new Point2D(2,3);
+        a.lisaaJalokivi(i);
+        assertEquals(3, a.getRivi());
+    }
+    @Test
+    public void lisaaJalokiviaNelja() {
+        Point2D i = new Point2D(0,4);
+        
+        a.lisaaJalokivi(i);
+        assertEquals(4, a.getRivi());
+    }
+    @Test
+    public void lisaaJalokivia() {
+        Point2D i = new Point2D(0,0);
+        Point2D z = new Point2D(6,6);
+        a.lisaaJalokivi(z);
+        
+        assertEquals(6, a.getRivi());
+    }
+    
     @Test
     public void korkeus()  {
         assertEquals(100, a.getPelilauta());
 
+    }
+    @Test
+    public void leveys() {
+
+        assertEquals(6, a.getLeveys());
+    }
+    @Test
+    public void lisaaKaikkiJalokivet() {
+        Point2D i = new Point2D(6,6);
+        a.lisaaJalokivi(i);
+        assertEquals(6, a.getRivi());
     }
     
 

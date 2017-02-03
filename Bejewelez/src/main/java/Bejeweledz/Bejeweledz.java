@@ -1,6 +1,7 @@
 package Bejeweledz;
 
 import Jalokivet.Jalokivet;
+import java.util.ArrayList;
 
 import java.util.List;
 import java.util.Map;
@@ -32,7 +33,7 @@ public class Bejeweledz extends Application {
         Color.AQUA, Color.DEEPPINK, Color.BLUEVIOLET, Color.CORAL, Color.YELLOW, Color.CRIMSON};
 
     private Jalokivi selected = null;
-    private List<Jalokivi> jalokivet;
+    private List<Jalokivi> jalokivet = new ArrayList<>();
 
     public Parent logiikka() {
         Pane p = new Pane();
@@ -93,6 +94,12 @@ public class Bejeweledz extends Application {
 
     public int getPelilauta() {
         return Pelilauta;
+    }
+    public int returnJalokivet() {
+        if (!jalokivet.isEmpty()) {
+            return jalokivet.size();
+        }
+        return 0;
     }
 
     public static void main(String[] args) {
