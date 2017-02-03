@@ -33,7 +33,7 @@ public class Bejeweledz extends Application {
         Color.AQUA, Color.DEEPPINK, Color.BLUEVIOLET, Color.CORAL, Color.YELLOW, Color.CRIMSON};
 
     private Jalokivi selected = null;
-    private List<Jalokivi> jalokivet = new ArrayList<>();
+    private List<Jalokivi> jalokivet;
 
     public Parent logiikka() {
         Pane p = new Pane();
@@ -56,7 +56,7 @@ public class Bejeweledz extends Application {
         primaryStage.show();
     }
 
-    private class Jalokivi extends Parent {
+    public class Jalokivi extends Parent {
 
         private Circle circle = new Circle(Pelilauta / 2);
 

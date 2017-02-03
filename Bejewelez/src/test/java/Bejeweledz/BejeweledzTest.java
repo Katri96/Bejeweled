@@ -64,11 +64,7 @@ public class BejeweledzTest {
         assertEquals(6, peli.getKorkeus());
     }
 
-    @Test
-    public void peliLaudassaNollaJalokivea()  {
-        
-        assertEquals(peli.returnJalokivet(), 0);
-    }
+    
     
 
     // TODO add test methods here.
