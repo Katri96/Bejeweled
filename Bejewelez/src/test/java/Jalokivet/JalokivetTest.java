@@ -56,7 +56,7 @@ public class JalokivetTest {
         assertEquals(0, a.getRivi());
     }
     @Test
-    public void lisaaNollakohtaanJalokivet() {
+    public void eilisataNollaaJalokivea() {
         Point2D i = new Point2D(2,0);
         a.lisaaJalokivi(i);
         assertEquals(0, a.getRivi());
