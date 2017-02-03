@@ -20,8 +20,3 @@ enää yhdistelemään.
 #Luokkakaavio: 
 ![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/javalabra.png "Logo Title Text 1")
 
-#Pit testit
-[pit-raportti](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/target/pit-reports/201702031520/index.html)
-
-#Checkstyle
-[checkstyle](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/target/site/checkstyle.html)
