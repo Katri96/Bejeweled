@@ -18,5 +18,5 @@ enää yhdistelemään.
 -Pelin lopettaminen
 
 #Luokkakaavio: 
-![alt text](https://raw.githubusercontent.com/Katri96/Bejeweledz/master/dokumentaatio/luokkakaavio.png "Logo Title Text 1")
+![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/javalabra.png "Logo Title Text 1")
 
