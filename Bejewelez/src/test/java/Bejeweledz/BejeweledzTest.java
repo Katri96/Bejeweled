@@ -47,24 +47,6 @@ public class BejeweledzTest {
     public void tearDown() {
     }
 
-    @Test
-    public void testaaJalovienLuonti() {
-
-        assertEquals(100, peli.getPelilauta());
-    }
-
-    @Test
-    public void pituus() {
-
-        assertEquals(6, peli.getPituus());
-    }
-
-    @Test
-    public void leveys() {
-        assertEquals(6, peli.getKorkeus());
-    }
-
-    
     
 
     // TODO add test methods here.
