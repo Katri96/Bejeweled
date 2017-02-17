@@ -3,7 +3,7 @@
  tarkoituksenaan tehdä yhdistelmä koko rivistä timantteja, tarkoituksena on saada mahdollisimman 
 paljon pisteitä. Pelaajan saadessa tarpeeksi pisteitä, siirtyy hän seuraavalle 
 ja vaikeammalle tasolle, joka vaikeutuu esim. lisäämällä erilaisten timanttien määrää. 
-Pelaajan pisteet ovat näkyvillä ja jokaisesta yhdistelmästä saa 1000 pistettä. Lopulta peli loppuu, kun jalokiviä ei pystytä 
+Pelaajan pisteet ovat näkyvillä ja jokaisesta yhdistelmästä saa 100 pistettä. Lopulta peli loppuu, kun jalokiviä ei pystytä 
 enää yhdistelemään.
 
 ###Käyttäjät: 
@@ -15,6 +15,13 @@ enää yhdistelemään.
 -Pisteiden saaminen
 -Pelin lopettaminen
 
-#Luokkakaavio: 
-![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/javalabra.png "Logo Title Text 1")
+##Luokkakaavio: 
+![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/luokkakaavio.png "Logo Title Text 1")
 
+##Sekvenssikaaviot:
+
+#Sekvenssikaavio pelilaudan luomiselle
+![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/sekvenssikaavio.png "Logo Title Text 1")
+
+#Sekvenssikaavio pisteiden lisäämisestä yhdistelmän ohessa:
+![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/rivinYhdistelmaSekvenssikaavio.png "Logo Title Text 1")
