@@ -27,6 +27,8 @@ import javafx.stage.Stage;
 public class Bejeweledz extends Application {
     
     public Pelipaneeli jalokivet;
+    
+    /*Luodaan Pelipaneeli Main luokassa ja tuodaan se näkyviin */
 
 
     @Override

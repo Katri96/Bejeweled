@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="Peli.JalokiviTest" time="0.255" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="Peli.JalokiviTest" time="0.301" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/mkatri/jdk1.8.0_111/jre/lib/amd64"/>
@@ -62,10 +62,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Peli.JalokiviTest" name="varinLisaysToimii" time="0.173"/>
+  <testcase classname="Peli.JalokiviTest" name="varinLisaysToimii" time="0.215"/>
   <testcase classname="Peli.JalokiviTest" name="jalokivetRiveilla" time="0"/>
   <testcase classname="Peli.JalokiviTest" name="aluksiSarakkeetTyhjat" time="0"/>
   <testcase classname="Peli.JalokiviTest" name="jalokivetSarakkeilla" time="0"/>
   <testcase classname="Peli.JalokiviTest" name="randomiVariToimii" time="0"/>
+  <testcase classname="Peli.JalokiviTest" name="jalokivinVaihtoToimii" time="0"/>
   <testcase classname="Peli.JalokiviTest" name="aluksiRivitTyhjat" time="0"/>
 </testsuite>

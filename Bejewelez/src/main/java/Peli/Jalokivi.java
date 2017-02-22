@@ -27,28 +27,31 @@ import javafx.scene.shape.Circle;
  */
 public class Jalokivi extends Parent {
 
-    private static final int Leveys = 6;
-    private static final int Korkeus = 6;
-    private static final int Koko = 100;
+    private int Koko = 100;
     private Color[] varit = new Color[]{
-        Color.AQUA, Color.DEEPPINK, Color.BLUEVIOLET, Color.CORAL, Color.YELLOW, Color.CRIMSON};
-
-    Jalokivi selected = null;
-    private List<Jalokivi> jalokivet;
-    private Pelipaneeli paneeli;
+        Color.DEEPPINK, Color.BLUEVIOLET, Color.SPRINGGREEN,
+        Color.CORAL, Color.YELLOW, Color.CRIMSON};
 
     public Circle ympyra = new Circle(Koko / 2);
 
     public Jalokivi(Point2D point) {
-
+        /* Luodaan uusi ympyrä ja luodaan sen keskipiste kohtaan x = 50 ja Y = 50. 
+        Seuraavaksi asetetaan ympyrälle random väri kuudesta eri vaihtoehdosta.
+        Lopuksi asetetaan ympyrä haluttuun kohtaan eli pointtiin kertomallalla X ja Y koordinaatti sadalla,
+        koska alueen max Y = 600 ja X = 600 ja ympyröitä tulee yhteensä 36.
+        Luodaan ympyrästä objekti ja palautetaan tämä.
+        */
+        
         ympyra.setCenterX(Koko / 2);
         ympyra.setCenterY(Koko / 2);
         ympyra.setFill(varit[new Random().nextInt(varit.length)]);
 
         setTranslateX(point.getX() * Koko);
         setTranslateY(point.getY() * Koko);
+        
 
         getChildren().add(ympyra);
+        
 
     }
 
@@ -71,7 +74,5 @@ public class Jalokivi extends Parent {
     public Paint getVari() {
         return ympyra.getFill();
     }
-
- 
 
 }

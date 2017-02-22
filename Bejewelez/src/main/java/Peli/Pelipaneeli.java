@@ -24,7 +24,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javax.swing.event.MouseInputAdapter;
 
-public class Pelipaneeli extends Application {
+public class Pelipaneeli {
 
     private static final int Leveys = 6;
     private static final int Korkeus = 6;
@@ -36,12 +36,11 @@ public class Pelipaneeli extends Application {
     private IntegerProperty pisteet = new SimpleIntegerProperty();
 
     public Parent pelipaneeli() {
-        
+
         /*Luodaan root ja asetetaan ikkunan leveys ja korkeus ja lisätään sinne jalokivet
         Jalokivi luokan kautta. Lisätään toiminto joka aktivoituu hiiren klikkauksella, ja etsitään
         eventin x ja y pisteet, ja verrataan niitä jalokivien riveihin (y) ja sarakkeisiin (x).
         Lisätään ikkunaan myös tekstikenttä, johon tulee pisteet, jotka lisääntyvät aina uudesta yhdistelmästä.*/
-        
         Pane root = new Pane();
         root.setPrefSize(Leveys * Koko + 250, Korkeus * Koko);
 
@@ -51,22 +50,18 @@ public class Pelipaneeli extends Application {
                 .collect(Collectors.toList());
 
         root.getChildren().addAll(jalokivet);
-
         root.setOnMouseClicked(event -> {
 
             if (valittuJalokivi == null) {
-
                 valittuJalokivi = this.etsiJalokivi((int) event.getX() / 100, (int) event.getY() / 100);
-
             } else {
-
                 vaihdaJalokivet(this.etsiJalokivi((int) event.getX() / 100, (int) event.getY() / 100), valittuJalokivi);
-
                 tarkistaJalokivet();
                 valittuJalokivi = null;
 
             }
         });
+
         Text textScore = new Text();
         textScore.setTranslateX(Leveys * Koko);
         textScore.setTranslateY(100);
@@ -75,6 +70,19 @@ public class Pelipaneeli extends Application {
 
         root.getChildren().add(textScore);
         return root;
+    }
+
+    public Jalokivi etsiJalokivi(int x, int y) {
+
+        for (Jalokivi a : jalokivet) {
+
+            if (a.getSarake() == x && a.getRivi() == y) {
+
+                return a;
+            }
+
+        }
+        return null;
     }
 
     public void tarkistaJalokivet() {
@@ -100,29 +108,9 @@ public class Pelipaneeli extends Application {
 
     public void vaihdaJalokivet(Jalokivi a, Jalokivi b) {
 
-        System.out.println("onnistu");
         Paint vari = a.getVari();
         a.setVari(b.getVari());
         b.setVari(vari);
-    }
-
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        primaryStage.setScene(new Scene(pelipaneeli()));
-        primaryStage.show();
-    }
-
-    public Jalokivi etsiJalokivi(int x, int y) {
-
-        for (Jalokivi a : jalokivet) {
-
-            if (a.getSarake() == x && a.getRivi() == y) {
-
-                return a;
-            }
-
-        }
-        return null;
     }
 
 }
