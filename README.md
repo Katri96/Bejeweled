@@ -12,7 +12,7 @@ Bejeweled on timanttien yhdistelyyn perustuva puzzle peli, jossa tavoitteena on 
 
 
 #Pit testit
-[pit-raportti](http://htmlpreview.github.io/?https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/target/pit-reports/201702031520/index.html)
+[pit-raportti](http://htmlpreview.github.io/?https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/target/pit-reports/201702241545/index.html)
 
 #Checkstyle
 [checkstyle](http://htmlpreview.github.io/https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/target/site/checkstyle.html)
