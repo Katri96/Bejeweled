@@ -16,11 +16,11 @@ import javafx.geometry.Point2D;
 import javafx.scene.Parent;
 
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-
 
 public class Pelipaneeli {
 
@@ -60,13 +60,20 @@ public class Pelipaneeli {
             }
         });
 
-        Text textScore = new Text();
-        textScore.setTranslateX(Leveys * Koko);
-        textScore.setTranslateY(100);
-        textScore.setFont(Font.font(68));
-        textScore.textProperty().bind(pisteet.asString("Pisteet: " + "\n" + "[%d]"));
+        Text pisteytys = new Text();
+        pisteytys.setTranslateX(Leveys * Koko);
+        pisteytys.setTranslateY(100);
+        pisteytys.setFont(Font.font(68));
+        pisteytys.textProperty().bind(pisteet.asString("Pisteet: " + "\n" + "[%d]"));
+        Text timanttiPisteet = new Text();
+        timanttiPisteet.setTranslateX(Leveys * Koko + 10);
+        timanttiPisteet.setTranslateY(230);
+        timanttiPisteet.setFont(Font.font(15));
+        
+        timanttiPisteet.setText("Jalokivien arvo: \n \nKeltainen = 500\nPinkki = 300\nVihreä = 200");
+        root.getChildren().add(timanttiPisteet);
 
-        root.getChildren().add(textScore);
+        root.getChildren().add(pisteytys);
         return root;
     }
 
@@ -96,10 +103,28 @@ public class Pelipaneeli {
     public void tarkistaYhdistelmat(List<Jalokivi> jalokiviJono) {
         /* Tarkistetaan jalokivet jono jonolta, jos niissä kaikissa on samat värit. Jos jono  */
 
-        Jalokivi jewel = jalokiviJono.get(0);
-        long count = jalokiviJono.stream().filter(j -> j.getVari() != jewel.getVari()).count();
+        Jalokivi jalokivi = jalokiviJono.get(0);
+        Color vari = (Color) jalokivi.getVari();
+        long count = jalokiviJono.stream().filter(j -> j.getVari() != jalokivi.getVari()).count();
         if (count == 0) {
-            pisteet.set(pisteet.get() + 100);
+            if (vari == Color.BLUEVIOLET) {
+                pisteet.set(pisteet.get() + 50);
+            }
+             if (vari == Color.CRIMSON) {
+                pisteet.set(pisteet.get() + 50);
+            }
+             if (vari == Color.CORAL) {
+                pisteet.set(pisteet.get() + 50);
+            }
+             if (vari == Color.SPRINGGREEN) {
+                pisteet.set(pisteet.get() + 200);
+            }
+             if (vari == Color.YELLOW) {
+                pisteet.set(pisteet.get() + 500);
+            }
+              if (vari == Color.DEEPPINK) {
+                pisteet.set(pisteet.get() + 300);
+            }
             jalokiviJono.forEach(Jalokivi::randomi);
         }
     }

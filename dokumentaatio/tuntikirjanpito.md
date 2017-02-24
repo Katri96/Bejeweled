@@ -6,4 +6,6 @@ Päivä | Tunnit | Kuvaus
 02.02.2017 | 5h | Grafiikkaa, päivittämistä, testejä
 03.02.2017 | 6h | Dokumentointi, testit, README päivitys
 10.02.2017 | 5h | Aiheen muokkaaminen, pelin logiikan valmiiksi saaminen, luokkien suunnittelu uusiksi
+15.02.2017 | 6h | Pelin toiminnallisuuden muokkausta, testejä, dokumentointia
+23.02.2017 | 3h | Rakennekuvaus, käyttöohje, git-testien ja checkstylen raporttien luomista
 
