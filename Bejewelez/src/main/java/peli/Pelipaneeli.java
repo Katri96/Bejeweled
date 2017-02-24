@@ -1,24 +1,17 @@
-package Peli;
+package peli;
 
-import Jalokivi.Jalokivi;
+import jalokivi.Jalokivi;
 import java.util.List;
 import java.util.Map;
-
-
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-
 import javafx.geometry.Point2D;
 import javafx.scene.Parent;
-
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
-
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
@@ -37,8 +30,7 @@ public class Pelipaneeli {
 
         /*Luodaan root ja asetetaan ikkunan leveys ja korkeus ja lisätään sinne jalokivet
         Jalokivi luokan kautta. Lisätään toiminto joka aktivoituu hiiren klikkauksella, ja etsitään
-        eventin x ja y pisteet, ja verrataan niitä jalokivien riveihin (y) ja sarakkeisiin (x).
-        Lisätään ikkunaan myös tekstikenttä, johon tulee pisteet, jotka lisääntyvät aina uudesta yhdistelmästä.*/
+        eventin x ja y pisteet, ja verrataan niitä jalokivien riveihin (y) ja sarakkeisiin (x).*/
         Pane root = new Pane();
         root.setPrefSize(Leveys * Koko + 250, Korkeus * Koko);
 
@@ -59,6 +51,9 @@ public class Pelipaneeli {
 
             }
         });
+        /*Lisätään ikkunaan tekstikenttä, johon tulee pisteet, jotka lisääntyvät aina uudesta yhdistelmästä.
+        Lisätään myös toinen tekstikenttä, jossa lukee ohjeistusta eri timanttien arvoista. Lisätään nämä Pane muuttujaan
+        ja palautetaan se.*/
 
         Text pisteytys = new Text();
         pisteytys.setTranslateX(Leveys * Koko);
@@ -78,6 +73,8 @@ public class Pelipaneeli {
     }
 
     public Jalokivi etsiJalokivi(int x, int y) {
+        /*Metodi etsii kaikista jalokivistä sen, johon on klikattu hiirellä ja palauttaa sen jalokiven.
+        Jos klikkaus ei koske jalokiviin, niin palauttaa metodi null.*/
 
         for (Jalokivi a : jalokivet) {
 
@@ -91,7 +88,8 @@ public class Pelipaneeli {
     }
 
     public void tarkistaJalokivet() {
-        /* Tässä metodissa tarkistetaan jokainen rivi ja sarake, jos jalokivistä on muodostunut yhdistelmiä.*/
+        /* Tässä metodissa jaetaan jokainen rivi ja sarake omiin jonoihinsa ja annetaan nämä tarkistaYhdistelmat() metodille,
+        jotta saadaan selville, onko jalokivistä muodostunut rivin tai sarakkeen pituisia samanväristen jalokivien yhdistelmiä.*/
 
         Map<Integer, List<Jalokivi>> rows = jalokivet.stream().collect(Collectors.groupingBy(Jalokivi::getRivi));
         Map<Integer, List<Jalokivi>> columns = jalokivet.stream().collect(Collectors.groupingBy(Jalokivi::getSarake));
@@ -130,6 +128,7 @@ public class Pelipaneeli {
     }
 
     public void vaihdaJalokivet(Jalokivi a, Jalokivi b) {
+        /* Metodi vaihtaa jalokivien värejä keskenään. */
 
         Paint vari = a.getVari();
         a.setVari(b.getVari());

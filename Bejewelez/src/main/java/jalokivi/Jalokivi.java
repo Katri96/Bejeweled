@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Jalokivi;
+package jalokivi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ import javafx.scene.shape.Circle;
  */
 public class Jalokivi extends Parent {
 
-    private int Koko = 100;
+    private int koko;
     private Color[] varit = new Color[]{
         Color.DEEPPINK, Color.BLUEVIOLET, Color.SPRINGGREEN,
         Color.CORAL, Color.YELLOW, Color.CRIMSON};
@@ -42,30 +42,35 @@ public class Jalokivi extends Parent {
         koska alueen max Y = 600 ja X = 600 ja ympyröitä tulee yhteensä 36.
         Luodaan ympyrästä objekti ja palautetaan tämä.
         */
-        ympyra = new Circle(Koko / 2);
+        koko = 100;
+        ympyra = new Circle(koko / 2);
         ympyra.setCenterX(50);
         ympyra.setCenterY(50);
         ympyra.setFill(varit[new Random().nextInt(varit.length)]);
 
-        setTranslateX(point.getX() * Koko);
-        setTranslateY(point.getY() * Koko);
+        setTranslateX(point.getX() * koko);
+        setTranslateY(point.getY() * koko);
         
 
         getChildren().add(ympyra);
         
 
     }
+    
 
     public void randomi() {
+        /*Asetetaan ympyrälle väri, valiten se randomilla kuudesta eri värivaihroehosta varit taulusta. */
         ympyra.setFill(varit[new Random().nextInt(varit.length)]);
     }
 
     public int getSarake() {
-        return (int) getTranslateX() / Koko;
+        /*Etsitään ympyrän piste ja jaetaan se sadalla, jotta vaihtoehdoksi saadaan jokin sarake väliltä 0-5. */
+        return (int) getTranslateX() / koko;
     }
 
     public int getRivi() {
-        return (int) getTranslateY() / Koko;
+         /*Etsitään ympyrän piste ja jaetaan se sadalla, jotta vaihtoehdoksi saadaan jokin rivi väliltä 0-5. */
+        return (int) getTranslateY() / koko;
     }
 
     public void setVari(Paint color) {
