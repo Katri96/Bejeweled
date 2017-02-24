@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Peli;
+package Jalokivi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,18 +32,19 @@ public class Jalokivi extends Parent {
         Color.DEEPPINK, Color.BLUEVIOLET, Color.SPRINGGREEN,
         Color.CORAL, Color.YELLOW, Color.CRIMSON};
 
-    public Circle ympyra = new Circle(Koko / 2);
+    public Circle ympyra;
 
     public Jalokivi(Point2D point) {
+      
         /* Luodaan uusi ympyrä ja luodaan sen keskipiste kohtaan x = 50 ja Y = 50. 
         Seuraavaksi asetetaan ympyrälle random väri kuudesta eri vaihtoehdosta.
         Lopuksi asetetaan ympyrä haluttuun kohtaan eli pointtiin kertomallalla X ja Y koordinaatti sadalla,
         koska alueen max Y = 600 ja X = 600 ja ympyröitä tulee yhteensä 36.
         Luodaan ympyrästä objekti ja palautetaan tämä.
         */
-        
-        ympyra.setCenterX(Koko / 2);
-        ympyra.setCenterY(Koko / 2);
+        ympyra = new Circle(Koko / 2);
+        ympyra.setCenterX(50);
+        ympyra.setCenterY(50);
         ympyra.setFill(varit[new Random().nextInt(varit.length)]);
 
         setTranslateX(point.getX() * Koko);

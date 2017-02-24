@@ -1,28 +1,26 @@
 package Peli;
 
+import Jalokivi.Jalokivi;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
+
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import javafx.application.Application;
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.event.EventType;
+
 import javafx.geometry.Point2D;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
+
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
+
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import javax.swing.event.MouseInputAdapter;
+
 
 public class Pelipaneeli {
 

@@ -52,10 +52,10 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
-                        <param>fi.klondike.logiikka.*</param>
+                        <param>Jalokivi*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>fi.klondike.logiikka.*</param>
+                        <param>Jalokivi*</param>
                     </targetTests>
                 </configuration>
             </plugin>
