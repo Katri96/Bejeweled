@@ -21,6 +21,8 @@ public class Pelipaneeli {
     private static final int Korkeus = 6;
     private static final int Koko = 100;
     private Jalokivi valittuJalokivi = null;
+    private Text pisteytys;
+    private Text timanttiPisteet;
 
     private List<Jalokivi> jalokivet;
 
@@ -54,21 +56,10 @@ public class Pelipaneeli {
         /*Lisätään ikkunaan tekstikenttä, johon tulee pisteet, jotka lisääntyvät aina uudesta yhdistelmästä.
         Lisätään myös toinen tekstikenttä, jossa lukee ohjeistusta eri timanttien arvoista. Lisätään nämä Pane muuttujaan
         ja palautetaan se.*/
+        lisaaTeksti(root);
 
-        Text pisteytys = new Text();
-        pisteytys.setTranslateX(Leveys * Koko);
-        pisteytys.setTranslateY(100);
-        pisteytys.setFont(Font.font(68));
-        pisteytys.textProperty().bind(pisteet.asString("Pisteet: " + "\n" + "[%d]"));
-        Text timanttiPisteet = new Text();
-        timanttiPisteet.setTranslateX(Leveys * Koko + 10);
-        timanttiPisteet.setTranslateY(230);
-        timanttiPisteet.setFont(Font.font(15));
         
-        timanttiPisteet.setText("Jalokivien arvo: \n \nKeltainen = 500\nPinkki = 300\nVihreä = 200");
-        root.getChildren().add(timanttiPisteet);
-
-        root.getChildren().add(pisteytys);
+        
         return root;
     }
 
@@ -105,23 +96,17 @@ public class Pelipaneeli {
         Color vari = (Color) jalokivi.getVari();
         long count = jalokiviJono.stream().filter(j -> j.getVari() != jalokivi.getVari()).count();
         if (count == 0) {
-            if (vari == Color.BLUEVIOLET) {
-                pisteet.set(pisteet.get() + 50);
-            }
-             if (vari == Color.CRIMSON) {
-                pisteet.set(pisteet.get() + 50);
-            }
-             if (vari == Color.CORAL) {
-                pisteet.set(pisteet.get() + 50);
-            }
-             if (vari == Color.SPRINGGREEN) {
+
+            if (vari == Color.SPRINGGREEN) {
                 pisteet.set(pisteet.get() + 200);
             }
-             if (vari == Color.YELLOW) {
+            if (vari == Color.YELLOW) {
                 pisteet.set(pisteet.get() + 500);
             }
-              if (vari == Color.DEEPPINK) {
+            if (vari == Color.DEEPPINK) {
                 pisteet.set(pisteet.get() + 300);
+            } else if (vari != Color.DEEPPINK && vari != Color.YELLOW && vari != Color.SPRINGGREEN) {
+                pisteet.set(pisteet.get() + 50);
             }
             jalokiviJono.forEach(Jalokivi::randomi);
         }
@@ -133,6 +118,39 @@ public class Pelipaneeli {
         Paint vari = a.getVari();
         a.setVari(b.getVari());
         b.setVari(vari);
+    }
+
+    public List<Jalokivi> getJalokivet() {
+        return jalokivet;
+    }
+
+    public int getPisteet() {
+        return pisteet.get();
+    }
+
+    public Text getTextTimantti() {
+        return timanttiPisteet;
+    }
+
+    public Text getTextPisteet() {
+        return pisteytys;
+    }
+    public void lisaaTeksti(Pane root) {
+        
+        pisteytys = new Text();
+        pisteytys.setTranslateX(Leveys * Koko);
+        pisteytys.setTranslateY(100);
+        pisteytys.setFont(Font.font(68));
+        pisteytys.textProperty().bind(pisteet.asString("Pisteet: " + "\n" + "[%d]"));
+        timanttiPisteet = new Text();
+        timanttiPisteet.setTranslateX(Leveys * Koko + 10);
+        timanttiPisteet.setTranslateY(230);
+        timanttiPisteet.setFont(Font.font(15));
+
+        timanttiPisteet.setText("Jalokivien arvo: \n \nKeltainen = 500\nPinkki = 300\nVihreä = 200");
+        root.getChildren().add(timanttiPisteet);
+
+        root.getChildren().add(pisteytys);
     }
 
 }

@@ -42,7 +42,7 @@
 <a class="jxr_linenumber" name="L34" href="#L34">34</a>  
 <a class="jxr_linenumber" name="L35" href="#L35">35</a>      <strong class="jxr_keyword">public</strong> Circle ympyra;
 <a class="jxr_linenumber" name="L36" href="#L36">36</a>  
-<a class="jxr_linenumber" name="L37" href="#L37">37</a>      <strong class="jxr_keyword">public</strong> <a href="../jalokivi/Jalokivi.html">Jalokivi</a>(Point2D point, <strong class="jxr_keyword">int</strong> koko) {
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      <strong class="jxr_keyword">public</strong> <a href="../jalokivi/Jalokivi.html">Jalokivi</a>(Point2D point) {
 <a class="jxr_linenumber" name="L38" href="#L38">38</a>        
 <a class="jxr_linenumber" name="L39" href="#L39">39</a>          <em class="jxr_comment">/* Luodaan uusi ympyrä ja luodaan sen keskipiste kohtaan x = 50 ja Y = 50. </em>
 <a class="jxr_linenumber" name="L40" href="#L40">40</a>  <em class="jxr_comment">        Seuraavaksi asetetaan ympyrälle random väri kuudesta eri vaihtoehdosta.</em>
@@ -50,7 +50,7 @@
 <a class="jxr_linenumber" name="L42" href="#L42">42</a>  <em class="jxr_comment">        koska alueen max Y = 600 ja X = 600 ja ympyröitä tulee yhteensä 36.</em>
 <a class="jxr_linenumber" name="L43" href="#L43">43</a>  <em class="jxr_comment">        Luodaan ympyrästä objekti ja palautetaan tämä.</em>
 <a class="jxr_linenumber" name="L44" href="#L44">44</a>  <em class="jxr_comment">        */</em>
-<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <strong class="jxr_keyword">this</strong>.koko = koko;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          koko = 100;
 <a class="jxr_linenumber" name="L46" href="#L46">46</a>          ympyra = <strong class="jxr_keyword">new</strong> Circle(koko / 2);
 <a class="jxr_linenumber" name="L47" href="#L47">47</a>          ympyra.setCenterX(50);
 <a class="jxr_linenumber" name="L48" href="#L48">48</a>          ympyra.setCenterY(50);
