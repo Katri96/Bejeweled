@@ -20,3 +20,6 @@ Bejeweled on timanttien yhdistelyyn perustuva puzzle peli, jossa tavoitteena on 
 ##Checkstyle
 [checkstyle](http://htmlpreview.github.io/?https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/target/site/checkstyle.html)
 
+##JavaDoc
+[javadoc](http://htmlpreview.github.io/?https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/target/site/apidocs/overview-summary.html)
+
