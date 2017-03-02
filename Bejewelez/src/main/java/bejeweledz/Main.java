@@ -1,4 +1,4 @@
-package Bejeweledz;
+package bejeweledz;
 
 import peli.Pelipaneeli;
 
@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 
-public class Bejeweledz extends Application {
+public class Main extends Application {
 
     public Pelipaneeli jalokivet;
 
@@ -20,7 +20,8 @@ public class Bejeweledz extends Application {
         primaryStage.show();
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    public void main(String[] args, Stage primaryStage) throws Exception {
+        
+        start(primaryStage);
     }
 }
