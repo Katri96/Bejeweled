@@ -9,7 +9,7 @@ Bejeweled on timanttien yhdistelyyn perustuva puzzle peli, jossa tavoitteena on 
 ###Käyttöohjeet
 [Käyttöohjeet](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/Kayttoohjeet.md)
 
-###Dokumentaatio ja testausdokumentaatio
+###Dokumentaatio | testausdokumentaatio
 [Aiheen kuvaus](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)   [Testausdokumentaatio](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/Testausdokumentaatio.md)
 
 ###Rakennekuvaus
