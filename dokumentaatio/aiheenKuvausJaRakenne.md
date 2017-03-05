@@ -21,5 +21,5 @@ Lopulta peli loppuu, kun jalokiviä ei pystytä enää yhdistelemään.
 ###Sekvenssikaavio pelilaudan luomiselle:
 ![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/sekvenssikaavio.png "Logo Title Text 1")
 
-###Sekvenssikaavio pisteiden lisäämisestä yhdistelmän ohessa:
-![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/rivinYhdistelmaSekvenssikaavio.png "Logo Title Text 1")
+###Sekvenssikaavio jalokivien vaihtamiselle:
+![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/jalokivienVaihtaminen.png "Logo Title Text 1")
