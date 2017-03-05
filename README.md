@@ -3,7 +3,7 @@
 --
 
 Ohjelmoinnin harjoitustyö 2017-3- Bejeweled peli
-Bejeweled on timanttien yhdistelyyn perustuva puzzle peli, jossa tavoitteena on yhdistää niin monta timanttia keskenään kun mahdollista.
+Bejeweled on timanttien yhdistelyyn perustuva puzzle peli, jossa tavoitteena on yhdistää niin monta riviä samanvärisiä timantteja kuin mahdollista.
 
 
 ##Käyttöohjeet
@@ -11,6 +11,11 @@ Bejeweled on timanttien yhdistelyyn perustuva puzzle peli, jossa tavoitteena on 
 
 ##Dokumentaatio
 [Aiheen kuvaus](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)
+
+##Rakennekuvaus
+[Rakennekuvaus](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/Rakennekuvaus.md)
+
+##Tuntikirjanpito
 [Tuntikirjanpito](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 
