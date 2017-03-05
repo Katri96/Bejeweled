@@ -18,7 +18,7 @@ Lopulta peli loppuu, kun jalokiviä ei pystytä enää yhdistelemään.
 ##Luokkakaavio: 
 ![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/luokkakaavio.png "Logo Title Text 1")
 
-###Sekvenssikaavio pelilaudan luomiselle
+###Sekvenssikaavio pelilaudan luomiselle:
 ![alt text](https://github.com/Katri96/Bejeweledz/blob/master/dokumentaatio/sekvenssikaavio.png "Logo Title Text 1")
 
 ###Sekvenssikaavio pisteiden lisäämisestä yhdistelmän ohessa:
